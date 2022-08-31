@@ -1,0 +1,142 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+:root {
+    /* variables: font  */
+   --font-primary: 'Montserrat';
+   --font-secondary: 'Fraunces';
+
+    /* variables: color */
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-very-dark-blue: hsl(161, 75%, 16%);
+    --color-dark-grayish-blue: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--color-cream);
+}
+
+p {
+    font-size: 0.875rem;
+    color: var(--color-dark-grayish-blue);
+}
+
+.container {
+    width: 667px;
+    height: 500px;
+    margin: 200px auto;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.product-img {
+    flex: 1;
+}
+.product-details {
+    background-color: var(--color-white);
+    padding: 40px;
+    flex: 1;
+}
+
+.product-type {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.product-name {
+    font-family: var(--font-secondary);
+    font-size: 2.25rem;
+    line-height: 2rem;
+    margin: 30px 0;
+}
+
+.product-description {
+    width: 235px;
+    margin-bottom: 25px;
+    line-height: 1.5rem;
+}
+
+.product-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.product-price-new {
+    font-family: var(--font-secondary);
+    font-size: 2.25rem;
+    color: var(--color-dark-cyan);
+}
+
+.product-price-old {
+    text-decoration: line-through;
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--color-dark-cyan);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-white);
+    padding: 15px;
+    border-style: none;
+    border-radius: 10px;
+
+}
+
+.btn:hover {
+    background-color: var(--color-very-dark-blue);
+    cursor: pointer;
+}
+
+.btn img {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 345px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-img {
+        content: url('images/image-product-mobile.jpg');
+    }
+
+    .product-details {
+        padding: 25px;
+    }
+
+    .product-name {
+        margin: 20px 0;
+    }
+
+    .product-description {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-price {
+        margin-bottom: 20px;
+    }
+}
